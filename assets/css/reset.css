@@ -1,0 +1,56 @@
+/* 초기화 */
+*{margin:0;padding:0;font:inherit;color:inherit;}
+*, :after, :before {box-sizing:border-box;}
+html, body {height:100%;}
+img, picture, video, canvas, svg {display: block;max-width:100%;}
+button {background:none;border:0;cursor:pointer;}
+a {text-decoration:none}
+table {border-collapse:collapse;border-spacing:0}
+ul{list-style: none;}
+fieldset,input {border: 0;}
+
+/* 세팅 */
+html {
+    font-size: .0694444444vw;
+}
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-size: 16rem;
+    background-color: #fff;
+    color: #24282c;
+    font-family: mason-m-font, serif;
+    font-weight: 700;
+}
+/* 폰트 */
+@font-face {
+    font-family: "mason-m-font";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../font/font500.woff2") format("woff2");
+}
+@font-face {
+    font-family: "mason-m-font";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../font/font700.woff2") format("woff2");
+}
+@font-face {
+    font-family: "mason-m-font";
+    font-style: normal;
+    font-weight: 900;
+    src: url("../font/font900.woff2") format("woff2");
+}
+
+/* common */
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    margin: -1px;
+    
+}
+
+
