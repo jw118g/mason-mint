@@ -230,6 +230,7 @@ introTl = gsap.timeline({
         start:"0% 0%",
         end:"100% 0%",
         scrub:0,
+        markers:true,
     }
 })
 introTl.to('.sc-intro .intro-text',{

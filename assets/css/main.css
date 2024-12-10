@@ -378,6 +378,7 @@ section {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
+    overflow: hidden;
 }
 .sc-intro::before {
     position: absolute;
@@ -401,6 +402,7 @@ section {
     position: absolute;
     top: 0;
     left: 0;
+
 }
 .sc-intro .intro-text {
     padding: 0 64rem;
