@@ -382,13 +382,13 @@ function createDiscoverAnimation() {
 }
 
 // 초기위치 설정
-gsap.set(".intro-text-bottom", { yPercent: 100});
-// 초기위치 설정
+//gsap.set(".intro-text-bottom", { yPercent: 100});
 gsap.set(".sc-distributor .title-wrap", { yPercent: 200});
 
 // 리사이즈 시에는 적용됐던 애니메이션 없애줌
 $(window).resize(function(){
-    gsap.set(".intro-text-bottom", { clearProps: "transform"});
+    gsap.set(".intro-text-bottom", { clearProps: "transform", yPercent:-100});
+    gsap.set(".intro-text-bottom", { yPercent:-100});
     gsap.set(".sc-distributor .title-wrap", { clearProps: "transform"});
 })
 
@@ -438,7 +438,7 @@ function applyTextAnimationIntro() {
             delay: 1
         })
         .to($('.intro-text-bottom'), {
-            yPercent: 0,
+            yPercent: -100,
             ease: "power2.out",
             
         })

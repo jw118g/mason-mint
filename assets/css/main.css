@@ -213,7 +213,7 @@ header .menu-btn.active span:nth-child(2) {
 
 .menu-area {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -373,8 +373,11 @@ section {
 .sc-intro {
     position: relative;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    padding-top: 150rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
 }
 .sc-intro::before {
     position: absolute;
@@ -395,19 +398,28 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .sc-intro .intro-text {
-    position: absolute;
-    bottom: 0;
     padding: 0 64rem;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
 }
 .sc-intro .intro-text .intro-text-top {
     padding-bottom: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
 }
 .sc-intro .intro-text strong {
-height: fit-content;
+    height: fit-content;
     color: #fff;
     font-size: 88rem;
     font-weight: 300;
@@ -417,12 +429,12 @@ height: fit-content;
     color: #266ef9;;
 }
 .sc-intro .intro-text .welcome {
-    position: absolute;
+    /* position: absolute;
     right: 0;
-    top: 55px;
+    top: 55px; */
     color: #8391a0;
     opacity: 0.999512;
-    margin: 0 25rem 95rem 0;
+    margin: 0 25rem 25rem 0;
     writing-mode: vertical-rl;
 }
 .sc-intro .intro-text .intro-text-bottom {
@@ -432,8 +444,8 @@ height: fit-content;
     width: 100%;
     padding: 32rem 0;
     border-top: 1px solid hsla(0, 0%, 100%, .1);
-    /* transform: translateY(100%); */
-    
+    transform: translateY(100%);
+
 }
 
 .sc-intro .intro-text .intro-text-bottom p {
@@ -1449,11 +1461,13 @@ height: fit-content;
         line-height: 1;
     }
     .sc-intro {
-        flex-direction: column-reverse;
-        gap: 20px;
+        padding: 136rem 0 0;
     }
     .sc-intro .intro-text-top {
         
+    }
+    .sc-intro .intro-text .welcome {
+        margin: 0 0 25rem;
     }
     .sc-intro .intro-text .intro-text-bottom {
         flex-direction: column-reverse;
