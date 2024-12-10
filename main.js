@@ -224,21 +224,7 @@ $('.question-item .title').click(function() {
 // })
 
 
-introTl = gsap.timeline({
-    scrollTrigger:{
-        trigger:".sc-intro",
-        start:"0% 0%",
-        end:"100% 0%",
-        scrub:0,
-        //markers:true,
-    }
-})
-introTl.to('.sc-intro .intro-text',{
-    yPercent:20
-})
-introTl.to('.sc-intro video',{
-    yPercent:15
-},"<")
+
 
 
 
@@ -661,6 +647,24 @@ division
 })
 
 ScrollTrigger.matchMedia({
+
+    "(min-width: 1025px)" :function() {
+        introTl = gsap.timeline({
+            scrollTrigger:{
+                trigger:".sc-intro",
+                start:"0% 0%",
+                end:"100% 0%",
+                scrub:0,
+                //markers:true,
+            }
+        })
+        introTl.to('.sc-intro .intro-text',{
+            yPercent:20
+        })
+        introTl.to('.sc-intro video',{
+            yPercent:15
+        },"<")
+    },
     "(max-width: 565px)": function() {
         // 스크롤 트리거 비활성화
         //ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // 모든 트리거 초기화
