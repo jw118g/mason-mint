@@ -96,24 +96,6 @@ $('.coinSwiper').hover(
     }
 )
 
-//커스텀 커서
-// const customCursor = document.querySelector('.custom-cursor');
-
-// let mouseX = 0;
-// let mouseY = 0;
-
-// document.addEventListener('mousemove', (e) => {
-//     mouseX = e.pageX;
-//     mouseY = e.pageY;
-// });
-
-// function updateCursor() {
-//     customCursor.style.left = `${mouseX}px`;
-//     customCursor.style.top = `${mouseY}px`;
-//     requestAnimationFrame(updateCursor);
-// }
-
-// updateCursor();
 
 $(document).mousemove(function(e){
     mouseX = e.clientX;
@@ -231,19 +213,6 @@ $('.question-item .title').click(function() {
 
 
 
-// headerMoiton= gsap.to('aa',{
-//     yPercent:-100,
-//     paused:true,
-//     onComplete:function(){
-//         // 헤더흰색만들기
-//     },
-//     onRerverseComplete:function(){
-
-//     }
-// })
-
-
-
 
 
 
@@ -263,46 +232,6 @@ $('[data-scroll="updown"]').each(function(i,el){
 })
 
 
-
-
-/* ScrollTrigger.create({
-    trigger:"body",
-    start:"0% 0%",
-    end:"100% 100%",
-    toggleClass:{
-        targets:"header",
-        className:"transparent"
-    },
-    //markers:true
-})
-
-const introScroll = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".sc-intro",
-        start: "0% 0%",
-        end: "100% 40%",
-        scrub: 2,
-        //markers:true,
-    },
-})
-introScroll
-.to('.sc-description',{
-    y:-500,
-})
-
-
-const storyBg = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".sc-description .story-area",
-        start: "0% 0%",
-        end: "100% 100%",
-        scrub: 2,
-        //markers:true,
-    },
-})
-storyBg.to(".sc-description .story-area",{
-    
-}) */
 
 
 /* textSplit 효과 */
@@ -486,15 +415,6 @@ $(window).resize(function() {
 
 
 
-// const headTxt2 = new SplitType('.split-line', { types: 'words, chars', });
-
-// gsap.from('.split-line .word',{
-//     opacity:0,
-//     stagger:0.1,
-// })
-
-// const splitLines = new SplitType('.split-line', {types: 'lines'});
-// $('.line').wrap('<div class="line-wrap">')
 
 let imgEl2 = ``;
 const totalImg2 = 62;
@@ -525,44 +445,6 @@ const rotateCoin = gsap.timeline({
 
 
 
-// let discoverSplit = new SplitType('.discover-area .text-wrap', {type: 'words, char'});
-
-
-// $('.sc-description .discover-area .text-wrap .char').each(function(i,el){
-//     gsap.from(el,{
-//         scrollTrigger: {
-//             trigger: el,
-//             start: "0% 90%",
-//             end: "100% 90%",
-//             scrub: 0,
-//             markers: true,
-//             containerAnimation: discoverTextMove,
-//         },
-//         opacity:0.7,
-//         rotateX:-90,
-//         ease:"none"
-//     })
-// })
-
-// opacity: 0.7;
-    // transform: rotateX(-90deg)
-// 
-
-
-
-
-/* function updateTextClasses() {
-    const spans = document.querySelectorAll(".discover-area .text-wrap span");
-    const progress = this.progress(); // 현재 진행 상태 (0에서 1 사이)
-
-    spans.forEach((span, index) => {
-        if (progress > index / spans.length) {
-            span.classList.add("active");
-        } else {
-            span.classList.remove("active");
-        }
-    });
-} */
 
 const moveRight = gsap.to('.sc-design .design-list',{
     duration:45,
