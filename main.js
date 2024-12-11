@@ -21,7 +21,26 @@ gsap.ticker.lagSmoothing(0);
 $('.menu-btn').click(function() {
     $(this).toggleClass('active');
     $('.menu-area').toggleClass('active');
+    $('html, body').toggleClass('disable-scroll');
 
+});
+
+const menuInner = document.querySelector('.menu-inner');
+menuInner.addEventListener('wheel', function(e) {
+    // e.deltaY 값으로 스크롤 방향을 감지
+    if (e.deltaY > 0) {
+    // 아래로 스크롤
+    menuInner.scrollBy({
+        top: 40, // 스크롤 간격 (위로, 아래로 조정 가능)
+        //behavior: 'smooth' // 부드러운 스크롤
+    });
+    } else {
+    // 위로 스크롤
+    menuInner.scrollBy({
+        top: -40, // 스크롤 간격 (위로, 아래로 조정 가능)
+        //behavior: 'smooth' // 부드러운 스크롤
+    });
+    }
 });
 
 var coinSwiper1 = new Swiper(".coinSwiper", {
@@ -374,9 +393,10 @@ gsap.set(".sc-distributor .title-wrap", { yPercent: 200});
 
 // 리사이즈 시에는 적용됐던 애니메이션 없애줌
 $(window).resize(function(){
-    gsap.set(".intro-text-bottom", { clearProps: "transform", yPercent:-100});
+    gsap.set(".intro-text-bottom", { clearProps: "transform"});
     gsap.set(".intro-text-bottom", { yPercent:-100});
     gsap.set(".sc-distributor .title-wrap", { clearProps: "transform"});
+    gsap.set(".sc-distributor .title-wrap", { yPercent:-200});
 })
 
 // text에 애니메이션을 적용하는 함수
